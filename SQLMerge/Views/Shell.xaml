@@ -3,12 +3,68 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-		xmlns:chrome="http://schemes.grabacr.net/winfx/2014/chrome"
+        xmlns:chrome="http://schemes.grabacr.net/winfx/2014/chrome"
         xmlns:metro="http://schemes.grabacr.net/winfx/2014/controls"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
         xmlns:local="clr-namespace:SQLMerge.Views"
         mc:Ignorable="d"
         Title="Shell" Height="300" Width="300">
+    <metro:MetroWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/SQLMerge;component/Styles/Style.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </metro:MetroWindow.Resources>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="23" />
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0"
+                metro:MetroWindow.IsCaptionBar="True">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="2" />
+                </Grid.RowDefinitions>
+                <metro:CaptionIcon Grid.Column="0">
+                    <Image Width="18" Height="18" Source="{Binding Path=Icon,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" />
+                </metro:CaptionIcon>
+                <TextBlock Grid.Column="1"
+                           Grid.Row="0"
+                           Text="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}, Path=Title}"
+                           TextTrimming="CharacterEllipsis"
+                           Foreground="{DynamicResource ForegroundBrushKey}"
+                           FontFamily="Segoe UI Light"
+                           FontSize="18"
+                           Margin="3,0,0,0"
+                           VerticalAlignment="Center" />
+                <metro:SystemButtons Grid.Column="2"
+                                        Grid.Row="0"
+                                        VerticalAlignment="Top" />
+            </Grid>
+        </Border>
+        <ContentControl 
+            Grid.Row="1" 
+            Grid.Column="0" 
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Background="{DynamicResource ThemeBrushKey}"
+            prism:RegionManager.RegionName="MainRegion"  />
+        <ContentControl 
+            Grid.Row="2" 
+            Grid.Column="0" 
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Background="{DynamicResource AccentBrushKey}"
+            prism:RegionManager.RegionName="StatusBarRegion"  />
     </Grid>
 </metro:MetroWindow>
