@@ -6,8 +6,9 @@
              xmlns:local="clr-namespace:SQLMerge.Views"
              mc:Ignorable="d" 
              Height="23"
+             d:DesignHeight="23"
              Width="Auto">
-    <Grid>
-        <StatusBar Width="Auto" Height="Auto" Margin="0"></StatusBar>
-    </Grid>
+    <StatusBar Width="Auto" Height="Auto" Margin="0">
+        
+    </StatusBar>
 </UserControl>
