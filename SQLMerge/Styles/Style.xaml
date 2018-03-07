@@ -3,5 +3,6 @@
                     xmlns:local="clr-namespace:HashChecker.Style">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/SQLMerge;component/Styles/Style.StatusBar.xaml" />
+        <ResourceDictionary Source="/SQLMerge;component/Styles/Style.Menu.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

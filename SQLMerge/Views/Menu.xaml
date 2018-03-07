@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              Height="23"
              d:DesignHeight="23" d:DesignWidth="300">
-    <Menu>
+    <Menu VerticalAlignment="Center">
         <MenuItem Header="ファイル(_F)" />
         <MenuItem Header="編集(_E)" />
         <MenuItem Header="オプション(_O)">
