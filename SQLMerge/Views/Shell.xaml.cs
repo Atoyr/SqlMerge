@@ -1,5 +1,4 @@
 ﻿using MetroRadiance.UI.Controls;
-using Prism.Regions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,9 +23,6 @@ namespace SQLMerge.Views
         public Shell()
         {
             InitializeComponent();
-            RegionManager.SetRegionName(Menu, Region.MenuRegion);
-            RegionManager.SetRegionName(Main, Region.MainRegion);
-            RegionManager.SetRegionName(StatusBar, Region.StatusBarRegion);
         }
     }
 }
