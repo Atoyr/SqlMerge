@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SQLMerge.Views
+namespace SQLMerge
 {
     /// <summary>
-    /// Shell.xaml の相互作用ロジック
+    /// MainWindow.xaml の相互作用ロジック
     /// </summary>
-    public partial class Shell : Window
+    public partial class MainWindow : Window
     {
-        public Shell()
+        public MainWindow()
         {
             InitializeComponent();
         }
