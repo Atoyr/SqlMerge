@@ -1,6 +1,4 @@
-﻿using MetroRadiance.UI.Controls;
-using Prism.Regions;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,21 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace SQLMerge.Views
 {
     /// <summary>
-    /// Shell.xaml の相互作用ロジック
+    /// DefaultStatusBar.xaml の相互作用ロジック
     /// </summary>
-    public partial class Shell : MetroWindow
+    public partial class DefaultStatusBar : UserControl
     {
-        public Shell()
+        public DefaultStatusBar()
         {
             InitializeComponent();
-            RegionManager.SetRegionName(Menu, Region.MenuRegion);
-            RegionManager.SetRegionName(Main, Region.MainRegion);
-            RegionManager.SetRegionName(StatusBar, Region.StatusBarRegion);
         }
     }
 }
