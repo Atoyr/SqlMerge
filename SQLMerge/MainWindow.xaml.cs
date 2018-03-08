@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SQLMerge.Views
+namespace SQLMerge
 {
     /// <summary>
-    /// Menu.xaml の相互作用ロジック
+    /// MainWindow.xaml の相互作用ロジック
     /// </summary>
-    public partial class Menu : UserControl
+    public partial class MainWindow : Window
     {
-        public Menu()
+        public MainWindow()
         {
             InitializeComponent();
         }
