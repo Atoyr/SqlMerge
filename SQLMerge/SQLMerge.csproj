@@ -97,10 +97,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Modules\DebugModule.cs" />
     <Compile Include="Modules\MainModule.cs" />
     <Compile Include="Modules\MenuModule.cs" />
     <Compile Include="Modules\StatusBarModule.cs" />
     <Compile Include="Region.cs" />
+    <Compile Include="Views\DebugView.xaml.cs">
+      <DependentUpon>DebugView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DefaultStatusBar.xaml.cs">
       <DependentUpon>DefaultStatusBar.xaml</DependentUpon>
     </Compile>
@@ -148,6 +152,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Styles\Style.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DebugView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
