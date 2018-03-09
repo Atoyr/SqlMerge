@@ -9,6 +9,8 @@
              d:DesignHeight="23"
              Width="Auto">
     <StatusBar Width="Auto" Height="Auto" Margin="0">
-        
+        <StatusBarItem VerticalContentAlignment="Center">
+            <TextBlock Text="準備完了" />
+        </StatusBarItem>
     </StatusBar>
 </UserControl>
