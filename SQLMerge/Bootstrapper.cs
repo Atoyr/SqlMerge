@@ -24,6 +24,9 @@ namespace SQLMerge
             catalog.AddModule(typeof(StatusBarModule));
             catalog.AddModule(typeof(MenuModule));
             catalog.AddModule(typeof(MainModule));
+#if DEBUG
+            catalog.AddModule(typeof(DebugModule));
+#endif
         }
     }
 }
