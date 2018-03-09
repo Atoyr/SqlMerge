@@ -11,5 +11,6 @@ namespace SQLMerge
         public const string MainRegion = "MainRegion";
         public const string MenuRegion = "MenuRegion";
         public const string StatusBarRegion = "StatusBarRegion";
+        public const string TabRegion = "TabRegion";
     }
 }
