@@ -4,12 +4,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+<<<<<<< HEAD
     xmlns:chrome="http://schemes.grabacr.net/winfx/2014/chrome"
     xmlns:controls="http://schemes.grabacr.net/winfx/2014/controls"
+=======
+>>>>>>> bd65e4f7dd30fb1b6c5b63b5084b276f01f6c679
     xmlns:local="clr-namespace:SQLMerge.Views"
     mc:Ignorable="d" 
     d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
+<<<<<<< HEAD
         <TabControl>
             <TabControl.Style>
                 <Style TargetType="{x:Type TabControl}">
@@ -135,5 +139,14 @@
                 <!--<ui:ControlSamples />-->
             </TabItem>
         </TabControl>
+=======
+        <Grid.RowDefinitions>
+            <RowDefinition Height="23"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" VerticalAlignment="Center">
+            <TextBlock Text="Debug" />
+        </StackPanel>
+>>>>>>> bd65e4f7dd30fb1b6c5b63b5084b276f01f6c679
     </Grid>
 </UserControl>

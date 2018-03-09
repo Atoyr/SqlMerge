@@ -11,9 +11,15 @@
     d:DesignHeight="23"
     Width="Auto">
     <StatusBar Width="Auto" Height="Auto" Margin="0">
+<<<<<<< HEAD
         <StatusBarItem DockPanel.Dock ="Right">
             <controls:ResizeGrip />
         </StatusBarItem>
         <StatusBarItem />
+=======
+        <StatusBarItem VerticalContentAlignment="Center">
+            <TextBlock Text="準備完了" />
+        </StatusBarItem>
+>>>>>>> bd65e4f7dd30fb1b6c5b63b5084b276f01f6c679
     </StatusBar>
 </UserControl>
