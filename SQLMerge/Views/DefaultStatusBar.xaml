@@ -12,7 +12,7 @@
     Width="Auto">
     <StatusBar Width="Auto" Height="Auto" Margin="0">
         <StatusBarItem DockPanel.Dock ="Right">
-            <controls:ResizeGrip  Grid.Column="1" />
+            <controls:ResizeGrip />
         </StatusBarItem>
         <StatusBarItem />
     </StatusBar>
