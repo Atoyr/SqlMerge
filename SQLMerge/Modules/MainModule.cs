@@ -1,6 +1,7 @@
 ﻿using Microsoft.Practices.Unity;
 using Prism.Modularity;
 using Prism.Regions;
+using SQLMerge.Views;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,8 +20,8 @@ namespace SQLMerge.Modules
         public void Initialize()
         {
             //this.Container.RegisterType<MessageProvider>(new ContainerControlledLifetimeManager());
-            //this.Container.RegisterType<object, DefaultStatusBar>(nameof(DefaultStatusBar));
-            //this.RegionManager.RequestNavigate("StatusBarRegion", nameof(DefaultStatusBar));
+            this.Container.RegisterType<object, TabView>(nameof(TabView));
+            this.RegionManager.RequestNavigate("StatusBarRegion", nameof(TabView));
         }
     }
 }
