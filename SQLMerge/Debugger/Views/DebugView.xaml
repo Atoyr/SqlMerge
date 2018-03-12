@@ -132,8 +132,7 @@
                     <TextBlock Text="Controls"
 							   Style="{StaticResource TabHeaderTextStyleKey}" />
                 </TabItem.Header>
-
-                <!--<ui:ControlSamples />-->
+                <local:ControlSamples />
             </TabItem>
         </TabControl>
     </Grid>
