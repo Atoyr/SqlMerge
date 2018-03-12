@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using Prism.Modularity;
 using SQLMerge.Modules;
+using SQLMerge.Debugger.Modules;
 
 namespace SQLMerge
 {

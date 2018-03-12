@@ -19,9 +19,8 @@ namespace SQLMerge.Modules
         public IRegionManager RegionManager { get; set; }
         public void Initialize()
         {
-            //this.Container.RegisterType<MessageProvider>(new ContainerControlledLifetimeManager());
             this.Container.RegisterType<object, TabView>(nameof(TabView));
-            this.RegionManager.RequestNavigate(Region.TabRegion, nameof(TabView));
+            //this.RegionManager.RequestNavigate(Region.TabRegion, nameof(TabView));
         }
     }
 }

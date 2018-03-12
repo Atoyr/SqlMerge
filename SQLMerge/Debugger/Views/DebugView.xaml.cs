@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SQLMerge.Views
+namespace SQLMerge.Debugger.Views
 {
     /// <summary>
     /// debugView.xaml の相互作用ロジック
