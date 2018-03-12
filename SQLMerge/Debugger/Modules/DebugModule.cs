@@ -1,16 +1,16 @@
 ﻿using Microsoft.Practices.Unity;
 using Prism.Modularity;
 using Prism.Regions;
-using SQLMerge.Views;
+using SQLMerge.Debugger.Views;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace SQLMerge.Modules
+namespace SQLMerge.Debugger.Modules
 {
-    public class MainModule : IModule
+    public class DebugModule : IModule
     {
         [Dependency]
         public IUnityContainer Container { get; set; }
@@ -19,8 +19,8 @@ namespace SQLMerge.Modules
         public IRegionManager RegionManager { get; set; }
         public void Initialize()
         {
-            this.Container.RegisterType<object, TabView>(nameof(TabView));
-            //this.RegionManager.RequestNavigate(Region.TabRegion, nameof(TabView));
+            this.Container.RegisterType<object, DebugView>(nameof(DebugView));
+            this.RegionManager.RequestNavigate("MainRegion", nameof(DebugView));
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using Prism.Regions;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SQLMerge.Views
+namespace SQLMerge.Debugger.Views
 {
     /// <summary>
-    /// TabView.xaml の相互作用ロジック
+    /// ThemaSample.xaml の相互作用ロジック
     /// </summary>
-    public partial class TabView : UserControl
+    public partial class ThemeSamples : UserControl
     {
-        public TabView()
+        public ThemeSamples()
         {
             InitializeComponent();
-            RegionManager.SetRegionName(this, Region.TabRegion);
         }
     }
 }

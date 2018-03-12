@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using Prism.Modularity;
 using SQLMerge.Modules;
+using SQLMerge.Debugger.Modules;
 
 namespace SQLMerge
 {
@@ -24,6 +25,10 @@ namespace SQLMerge
             catalog.AddModule(typeof(StatusBarModule));
             catalog.AddModule(typeof(MenuModule));
             catalog.AddModule(typeof(MainModule));
+#if DEBUG
+            catalog.AddModule(typeof(DebugModule));
+#endif
         }
     }
 }
+//ThemeService.Current.Register(this, Theme.Windows, Accent.Windows);
