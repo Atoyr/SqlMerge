@@ -99,8 +99,14 @@
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Debugger\Modules\DebugModule.cs" />
     <Compile Include="Debugger\ViewModles\DebugViewModel.cs" />
+    <Compile Include="Debugger\Views\ControlSamples.xaml.cs">
+      <DependentUpon>ControlSamples.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Debugger\Views\HsvSamples.xaml.cs">
       <DependentUpon>HsvSamples.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Debugger\Views\ImmersiveColorSamples.xaml.cs">
+      <DependentUpon>ImmersiveColorSamples.xaml</DependentUpon>
     </Compile>
     <Compile Include="EventAggregator\Events\ThemeValueEvent.cs" />
     <Compile Include="EventAggregator\Publisher.cs" />
@@ -157,7 +163,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Debugger\Views\ControlSamples.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Debugger\Views\HsvSamples.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Debugger\Views\ImmersiveColorSamples.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

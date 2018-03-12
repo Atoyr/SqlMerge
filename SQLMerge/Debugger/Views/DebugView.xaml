@@ -124,7 +124,7 @@
 							   Style="{StaticResource TabHeaderTextStyleKey}" />
                 </TabItem.Header>
 
-                <!--<ui:ImmersiveColorSamples />-->
+                <local:ImmersiveColorSamples />
             </TabItem>
 
             <TabItem>
