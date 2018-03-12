@@ -103,6 +103,14 @@
 
             <TabItem>
                 <TabItem.Header>
+                    <TextBlock Text="Main"
+							   Style="{StaticResource TabHeaderTextStyleKey}" />
+                </TabItem.Header>
+                <local:MainView />
+            </TabItem>
+
+            <TabItem>
+                <TabItem.Header>
                     <TextBlock Text="Themes"
 							   Style="{StaticResource TabHeaderTextStyleKey}" />
                 </TabItem.Header>
