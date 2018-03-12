@@ -21,7 +21,7 @@ namespace SQLMerge.Modules
         {
             //this.Container.RegisterType<MessageProvider>(new ContainerControlledLifetimeManager());
             this.Container.RegisterType<object, TabView>(nameof(TabView));
-            this.RegionManager.RequestNavigate("StatusBarRegion", nameof(TabView));
+            this.RegionManager.RequestNavigate(Region.TabRegion, nameof(TabView));
         }
     }
 }

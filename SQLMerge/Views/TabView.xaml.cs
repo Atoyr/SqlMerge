@@ -24,7 +24,7 @@ namespace SQLMerge.Views
         public TabView()
         {
             InitializeComponent();
-            RegionManager.SetRegionName(this, Region.StatusBarRegion);
+            RegionManager.SetRegionName(this, Region.TabRegion);
         }
     }
 }
