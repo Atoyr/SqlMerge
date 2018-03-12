@@ -18,9 +18,9 @@ namespace SQLMerge.Debugger.Views
     /// <summary>
     /// ThemaSample.xaml の相互作用ロジック
     /// </summary>
-    public partial class ThemaSample : UserControl
+    public partial class ThemeSamples : UserControl
     {
-        public ThemaSample()
+        public ThemeSamples()
         {
             InitializeComponent();
         }

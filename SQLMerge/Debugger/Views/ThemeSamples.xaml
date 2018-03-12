@@ -1,5 +1,5 @@
 ﻿<UserControl 
-    x:Class="SQLMerge.Debugger.Views.ThemaSample"
+    x:Class="SQLMerge.Debugger.Views.ThemeSamples"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -44,9 +44,6 @@
 					Margin="0,8" />
 
 			<DockPanel>
-				<!--<Panel.DataContext>
-					<ui:ThemeViewModel />
-				</Panel.DataContext>-->
 				<Panel.Resources>
 					<Style TargetType="{x:Type RadioButton}"
 						   BasedOn="{StaticResource {x:Type RadioButton}}">
@@ -57,7 +54,7 @@
 				<TextBlock Text="Theme:"
 						   Width="50" />
 				<RadioButton Content="Windows"
-							 IsChecked="{Binding Windows}" />
+							 IsChecked="{Binding ThemeWindows}" />
 				<Border Width="12" />
 				<WrapPanel>
 					<RadioButton Content="Dark"
@@ -72,9 +69,6 @@
 					Margin="0,8" />
 
 			<DockPanel>
-				<!--<Panel.DataContext>
-					<ui:AccentViewModel />
-				</Panel.DataContext>-->
 				<Panel.Resources>
 					<Style TargetType="{x:Type RadioButton}"
 						   BasedOn="{StaticResource {x:Type RadioButton}}">
@@ -85,7 +79,7 @@
 				<TextBlock Text="Accent:"
 						   Width="50" />
 				<RadioButton Content="Windows"
-							 IsChecked="{Binding Windows}" />
+							 IsChecked="{Binding AccentWindows}" />
 				<Border Width="12" />
 				<WrapPanel>
 					<RadioButton Content="Purple"

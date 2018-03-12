@@ -1,7 +1,7 @@
 ﻿using Microsoft.Practices.Unity;
 using Prism.Modularity;
 using Prism.Regions;
-using SQLMerge.Views;
+using SQLMerge.Debugger.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;

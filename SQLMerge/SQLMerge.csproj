@@ -98,6 +98,9 @@
     </Compile>
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Debugger\Modules\DebugModule.cs" />
+    <Compile Include="Debugger\ViewModles\DebugViewModel.cs" />
+    <Compile Include="EventAggregator\Events\ThemeValueEvent.cs" />
+    <Compile Include="EventAggregator\Publisher.cs" />
     <Compile Include="Modules\MainModule.cs" />
     <Compile Include="Modules\MenuModule.cs" />
     <Compile Include="Modules\StatusBarModule.cs" />
@@ -106,9 +109,10 @@
     <Compile Include="Debugger\Views\DebugView.xaml.cs">
       <DependentUpon>DebugView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Debugger\Views\ThemaSample.xaml.cs">
+    <Compile Include="Debugger\Views\ThemeSamples.xaml.cs">
       <DependentUpon>ThemeSamples.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="Views\DefaultStatusBar.xaml.cs">
       <DependentUpon>DefaultStatusBar.xaml</DependentUpon>
     </Compile>
@@ -188,7 +192,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ViewModels\" />
+    <Folder Include="EventAggregator\Providers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

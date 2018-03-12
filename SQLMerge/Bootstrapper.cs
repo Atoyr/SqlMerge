@@ -31,3 +31,4 @@ namespace SQLMerge
         }
     }
 }
+//ThemeService.Current.Register(this, Theme.Windows, Accent.Windows);

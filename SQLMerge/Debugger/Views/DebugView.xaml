@@ -6,7 +6,9 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
     xmlns:chrome="http://schemes.grabacr.net/winfx/2014/chrome"
     xmlns:controls="http://schemes.grabacr.net/winfx/2014/controls"
-    xmlns:local="clr-namespace:SQLMerge.Views"
+    xmlns:local="clr-namespace:SQLMerge.Debugger.Views"
+    xmlns:prism="http://prismlibrary.com/"
+    prism:ViewModelLocator.AutoWireViewModel="True"    
     mc:Ignorable="d" 
     d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
@@ -104,8 +106,7 @@
                     <TextBlock Text="Themes"
 							   Style="{StaticResource TabHeaderTextStyleKey}" />
                 </TabItem.Header>
-
-                <!--<ui:ThemeSamples />-->
+                <local:ThemeSamples />
             </TabItem>
 
             <TabItem>
