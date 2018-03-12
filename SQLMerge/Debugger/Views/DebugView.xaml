@@ -115,7 +115,7 @@
 							   Style="{StaticResource TabHeaderTextStyleKey}" />
                 </TabItem.Header>
 
-                <!--<ui:HsvSamples />-->
+                <local:HsvSamples />
             </TabItem>
 
             <TabItem>

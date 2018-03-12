@@ -99,6 +99,9 @@
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Debugger\Modules\DebugModule.cs" />
     <Compile Include="Debugger\ViewModles\DebugViewModel.cs" />
+    <Compile Include="Debugger\Views\HsvSamples.xaml.cs">
+      <DependentUpon>HsvSamples.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EventAggregator\Events\ThemeValueEvent.cs" />
     <Compile Include="EventAggregator\Publisher.cs" />
     <Compile Include="Modules\MainModule.cs" />
@@ -154,6 +157,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Debugger\Views\HsvSamples.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\Style.Menu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -191,8 +198,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="EventAggregator\Providers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
