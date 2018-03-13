@@ -97,18 +97,49 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Debugger\Modules\DebugModule.cs" />
+    <Compile Include="Debugger\ViewModles\DebugViewModel.cs" />
+    <Compile Include="Debugger\ViewModles\MainViewModel.cs" />
+    <Compile Include="Debugger\Views\ControlSamples.xaml.cs">
+      <DependentUpon>ControlSamples.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Debugger\Views\HsvSamples.xaml.cs">
+      <DependentUpon>HsvSamples.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Debugger\Views\ImmersiveColorSamples.xaml.cs">
+      <DependentUpon>ImmersiveColorSamples.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Debugger\Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventAggregator\Events\ThemeValueEvent.cs" />
+    <Compile Include="EventAggregator\Publisher.cs" />
     <Compile Include="Modules\MainModule.cs" />
     <Compile Include="Modules\MenuModule.cs" />
     <Compile Include="Modules\StatusBarModule.cs" />
     <Compile Include="Region.cs" />
+    <Compile Include="Debugger\ViewModles\ThemeSamplesViewModel.cs" />
+    <Compile Include="Debugger\Views\DebugView.xaml.cs">
+      <DependentUpon>DebugView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Debugger\Views\ThemeSamples.xaml.cs">
+      <DependentUpon>ThemeSamples.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="Views\DefaultStatusBar.xaml.cs">
       <DependentUpon>DefaultStatusBar.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ModalWindow.xaml.cs">
+      <DependentUpon>ModalWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TabView.xaml.cs">
+      <DependentUpon>TabView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +170,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Debugger\Views\ControlSamples.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Debugger\Views\HsvSamples.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Debugger\Views\ImmersiveColorSamples.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Debugger\Views\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\Style.Menu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -151,6 +198,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Debugger\Views\DebugView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Debugger\Views\ThemeSamples.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\DefaultStatusBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -159,11 +214,21 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\ModalWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Shell.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\TabView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Common\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

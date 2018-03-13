@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroRadiance.UI;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,6 +14,13 @@ namespace SQLMerge
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            this.ShutdownMode = ShutdownMode.OnMainWindowClose;
+
+            ThemeService.Current.Register(this, Theme.Windows, Accent.Windows);
+        }
         private void Application_Startup(object sender, StartupEventArgs e) => new Bootstrapper().Run();
     }
 }
