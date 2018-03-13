@@ -8,12 +8,18 @@
     xmlns:local="clr-namespace:SQLMerge.Views"
     mc:Ignorable="d" 
     Height="23"
+    xmlns:prism="http://prismlibrary.com/"
+    prism:ViewModelLocator.AutoWireViewModel="True"
     d:DesignHeight="23"
     Width="Auto">
     <StatusBar Width="Auto" Height="Auto" Margin="0">
-        <StatusBarItem DockPanel.Dock ="Right">
+        <StatusBarItem DockPanel.Dock="Right">
             <controls:ResizeGrip />
         </StatusBarItem>
-        <StatusBarItem />
+        <StatusBarItem DockPanel.Dock="Left" 
+                       VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Left"> 
+            <TextBlock Text="{Binding StatusText}" Margin="5,0,0,0"/>
+        </StatusBarItem>
     </StatusBar>
 </UserControl>
