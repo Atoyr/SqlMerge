@@ -109,7 +109,9 @@
                         <Trigger Property="Role" Value="SubmenuHeader">
                             <Setter Property="DockPanel.Dock" Value="Top"/>
                             <Setter Property="Padding" Value="0,2,0,2"/>
-                            <Setter Property="Background" Value="Blue"/>
+                            <Setter Property="BorderBrush" Value="{DynamicResource BorderBrushKey}"/>
+                            <Setter Property="Background" Value="{DynamicResource BackgroundBrushKey}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource ForegroundBrushKey}"/>
                         </Trigger>
 
                         <!-- Role = SubMenuItem : this is a child menu item which has children-->
@@ -137,26 +139,48 @@
                         </Trigger>
 
                         <!-- Using the system colors for the Menu Highlight and IsEnabled-->
-                        <MultiTrigger>
+                        <!--<MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="IsHighlighted" Value="true" />
                                 <Condition Property="StaysOpenOnClick" Value="true" />
                             </MultiTrigger.Conditions>
                             <MultiTrigger.Setters>
-                                <!--<Setter Property="BorderBrush" Value="{DynamicResource HighlightBorderBrushKey}"/>-->
+                                --><!--<Setter Property="BorderBrush" Value="{DynamicResource HighlightBorderBrushKey}"/>--><!--
+                                <Setter Property="Background" Value="{DynamicResource HighlightBackgroundBrushKey}" TargetName="Border"/>
+                                <Setter Property="Foreground" Value="{DynamicResource HighlightForegroundBrushKey}"/>
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>-->
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsHighlighted" Value="true" />
+                                <!--<Condition Property="StaysOpenOnClick" Value="true" />-->
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <!--<Setter Property="BorderBrush" Value="{DynamicResource Highlight2BorderBrushKey}"/>-->
                                 <Setter Property="Background" Value="{DynamicResource HighlightBackgroundBrushKey}" TargetName="Border"/>
                                 <Setter Property="Foreground" Value="{DynamicResource HighlightForegroundBrushKey}"/>
                             </MultiTrigger.Setters>
                         </MultiTrigger>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
-                                <Condition Property="IsHighlighted" Value="true" />
-                                <Condition Property="StaysOpenOnClick" Value="false" />
+                                <Condition Property="IsSubmenuOpen" Value="true" />
+                                <!--<Condition Property="StaysOpenOnClick" Value="false" />-->
                             </MultiTrigger.Conditions>
                             <MultiTrigger.Setters>
-                                <!--<Setter Property="BorderBrush" Value="{DynamicResource Highlight2BorderBrushKey}"/>-->
-                                <Setter Property="Background" Value="{DynamicResource Highlight2BackgroundBrushKey}" TargetName="Border"/>
-                                <Setter Property="Foreground" Value="{DynamicResource Highlight2ForegroundBrushKey}"/>
+                                <Setter Property="BorderBrush" Value="{DynamicResource BorderBrushKey}"/>
+                                <Setter Property="Background" Value="{DynamicResource BackgroundBrushKey}" TargetName="Border"/>
+                                <Setter Property="Foreground" Value="{DynamicResource ForegroundBrushKey}"/>
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsSubmenuOpen" Value="true" />
+                                <Condition Property="Role" Value="SubmenuHeader" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter Property="BorderBrush" Value="{DynamicResource HighlightBorderBrushKey}"/>
+                                <Setter Property="Background" Value="{DynamicResource HighlightBackgroundBrushKey}" TargetName="Border"/>
+                                <Setter Property="Foreground" Value="{DynamicResource HighlightForegroundBrushKey}"/>
                             </MultiTrigger.Setters>
                         </MultiTrigger>
                         <Trigger Property="IsEnabled" Value="false">
