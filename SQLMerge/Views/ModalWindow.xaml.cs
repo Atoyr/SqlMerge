@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroRadiance.UI.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ namespace SQLMerge.Views
     /// <summary>
     /// ModalWindow.xaml の相互作用ロジック
     /// </summary>
-    public partial class ModalWindow : Window
+    public partial class ModalWindow : MetroWindow
     {
         public ModalWindow()
         {
