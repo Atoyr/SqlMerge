@@ -92,6 +92,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EventAggregator\Events\StatusBarMessageChangeEvent.cs" />
+    <Compile Include="EventAggregator\Subscriber.cs" />
+    <Compile Include="ViewModels\DefaultStatusBarViewModel.cs" />
+    <Compile Include="ViewModels\UnityBindableBase.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>

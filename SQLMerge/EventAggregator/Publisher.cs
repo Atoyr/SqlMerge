@@ -1,4 +1,5 @@
-﻿using Microsoft.Practices.Unity;
+﻿using Microsoft.Practices.ServiceLocation;
+using Microsoft.Practices.Unity;
 using Prism.Events;
 using System;
 using System.Collections.Generic;
@@ -8,15 +9,12 @@ using System.Threading.Tasks;
 
 namespace SQLMerge.EventAggregator
 {
-    public class Publisher<TEventType,V> where TEventType : PubSubEvent<V>, new()
+    public static class Publisher<TEventType,V> where TEventType : PubSubEvent<V>, new()
     {
-        [Dependency]
-        public IEventAggregator EventAggregator { get; set; }        
-        public void Publish(V value)
+        public static void Publish(V value)
         {
-            this.EventAggregator
-                .GetEvent<TEventType>()
-                .Publish(value);
+            var eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+            eventAggregator?.GetEvent<TEventType>()?.Publish(value);
         }
     }
 }

@@ -1,9 +1,9 @@
 ﻿using MetroRadiance.UI;
 using Microsoft.Practices.Unity;
 using Prism.Events;
-using Prism.Mvvm;
 using SQLMerge.EventAggregator;
 using SQLMerge.EventAggregator.Events;
+using SQLMerge.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,12 +13,8 @@ using System.Windows.Media;
 
 namespace SQLMerge.Debugger.ViewModels
 {
-    public class ThemeSamplesViewModel : BindableBase
+    public class ThemeSamplesViewModel : UnityBindableBase
     {
-        [Dependency]
-        public IUnityContainer Container { get; set; }
-
-
         #region Windows 変更通知プロパティ
 
         private bool _ThemeWindows = ThemeService.Current.Theme == Theme.Windows;
