@@ -18,8 +18,8 @@
         </StatusBarItem>
         <StatusBarItem DockPanel.Dock="Left" 
                        VerticalContentAlignment="Center"
-                       HorizontalContentAlignment="Left"> 
-            <TextBlock Text="{Binding StatusText}" Margin="5,0,0,0"/>
+                       HorizontalContentAlignment="Left">
+            <TextBlock Text="{Binding StatusText}" Foreground="{DynamicResource AccentForegroundBrushKey}" Margin="5,0,0,0"/>
         </StatusBarItem>
     </StatusBar>
 </UserControl>
