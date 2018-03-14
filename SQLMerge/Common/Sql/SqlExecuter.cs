@@ -40,7 +40,11 @@ namespace SQLMerge.Common.Sql
 
         public bool CanConnect()
         {
-            using (var con = new SqlConnection(GetSqlConnectionString())) { }
+            using (var con = new SqlConnection(GetSqlConnectionString()))
+            {
+                con.Open();
+                con.Close();
+            }
             return true;
         }
 
@@ -50,16 +54,20 @@ namespace SQLMerge.Common.Sql
             try
             {
                 using (var con = new SqlConnection(GetSqlConnectionString()))
-                using (var reader = new SqlCommand(query, con).ExecuteReader())
                 {
-                    var dict = new Dictionary<string, object>();
+                    con.Open();
+                    var com = new SqlCommand(query, con);
+                    var reader = com.ExecuteReader();
                     while (reader.Read() == true)
                     {
-                        foreach (var v in reader)
-                        {
-                            dict[v.ToString()] = v;
+                        var dict = new Dictionary<string, object>();
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {                            
+                            dict[reader.GetName(i)] = reader[i];
                         }
+                        list.Add(dict);
                     }
+                    con.Close();
                 }
             }
             catch
