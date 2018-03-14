@@ -17,7 +17,7 @@ namespace SQLMerge.Common.Sql
         public int ConnectTimeout { get; set; } = 1000;
         public bool AsynchronousProcessing { get; set; } = true;
 
-        private SqlExecuter() { }
+        public SqlExecuter() { }
 
         private string GetSqlConnectionString()
         {
@@ -44,14 +44,15 @@ namespace SQLMerge.Common.Sql
             return true;
         }
 
-        public IDictionary<string,object> ExecuteSql(string query)
+        public IEnumerable<IDictionary<string,object>> ExecuteSql(string query)
         {
-            var dict = new Dictionary<string, object>();
+            var list = new List<IDictionary<string, object>>();
             try
             {
                 using (var con = new SqlConnection(GetSqlConnectionString()))
                 using (var reader = new SqlCommand(query, con).ExecuteReader())
                 {
+                    var dict = new Dictionary<string, object>();
                     while (reader.Read() == true)
                     {
                         foreach (var v in reader)
@@ -65,7 +66,7 @@ namespace SQLMerge.Common.Sql
             {
                 throw;
             }
-            return dict;
+            return list;
         }
     }
 }
