@@ -234,5 +234,8 @@
   <ItemGroup>
     <Folder Include="Common\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Docs\AUTHORS.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

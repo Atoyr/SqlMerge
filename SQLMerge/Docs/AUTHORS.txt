@@ -1,0 +1,9 @@
+﻿MetroRadiance
+Copyright (c) 2014 Manato KAMEYA
+This software is released under the MIT License.
+https://github.com/Grabacr07/MetroRadiance/blob/master/LICENSE.txt
+
+Prism
+Copyright (c) .NET Foundation
+This software is released under the MIT License.
+https://github.com/PrismLibrary/Prism/blob/master/LICENSE
