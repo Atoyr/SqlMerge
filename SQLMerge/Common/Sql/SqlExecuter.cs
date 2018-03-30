@@ -14,7 +14,7 @@ namespace SQLMerge.Common.Sql
         public string Password { set; get; } = string.Empty;
         public bool IsWindowsAuthentication { set; get; } = true;
         public string InitialCatalog { get; set; } = "master";
-        public int ConnectTimeout { get; set; } = 1000;
+        public int ConnectTimeout { get; set; } = 10;
         public bool AsynchronousProcessing { get; set; } = true;
 
         public SqlExecuter() { }

@@ -7,3 +7,8 @@ Prism
 Copyright (c) .NET Foundation
 This software is released under the MIT License.
 https://github.com/PrismLibrary/Prism/blob/master/LICENSE
+
+SQLParser
+Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.
+This software is released under the MIT License.
+https://github.com/antlr/antlr4/blob/master/LICENSE.txt
