@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLMerge", "SQLMerge\SQLMerge.csproj", "{B88ABA38-C666-4605-A1B4-7470925ADED6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLMerge.Test", "SQLMerge.Test\SQLMerge.Test.csproj", "{02932F61-2F96-4C9A-80DF-BD4961B82630}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B88ABA38-C666-4605-A1B4-7470925ADED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B88ABA38-C666-4605-A1B4-7470925ADED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B88ABA38-C666-4605-A1B4-7470925ADED6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02932F61-2F96-4C9A-80DF-BD4961B82630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02932F61-2F96-4C9A-80DF-BD4961B82630}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02932F61-2F96-4C9A-80DF-BD4961B82630}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02932F61-2F96-4C9A-80DF-BD4961B82630}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
